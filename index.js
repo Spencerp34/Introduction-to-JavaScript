@@ -185,8 +185,62 @@ Use the game function below to do the following:
 */
 
 function game(user, computer){
-    /*add your code here*/
+  if(user===computer){
+    return "it's a tie"
+  }
+  else if(user==="rock"){
+    if(computer==="paper"){
+      return "you lose!"
+    }
+    else if(computer==="scissors"){
+      return "you win!"
+    }
+  }
+  else if(user==="paper"){
+    if(computer==="scissors"){
+      return "you lose!"
+    }
+    else if(computer==="rock"){
+      return "you win!"
+    }
+  }
+  else if(user==="scissors"){
+    if(computer==="rock"){
+      return "you lose!"
+    }
+    else if(computer==="paper"){
+      return "you win!"
+    }
+  }
+  else{
+    return "Cheater..."
+  }
+ 
+  
 }
+
+
+
+
+let computer = Math.trunc(Math.random()*100)
+
+if(computer >= 0 && computer <= 33){
+ computer="rock"
+}
+else if(computer>= 34 && computer<= 66){
+ computer="paper"
+}
+else {
+ computer="scissors"
+}
+
+
+//0-33=rock
+//34-66=paper
+//67-100=scissors
+console.log(computer)
+
+console.log("result" , game("rock" ,computer))
   
   
 
@@ -201,9 +255,10 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
-  }
+function miles(kilos){
+  return kilos * 0.621371
+}
+console.log("task5a" , miles(5))
 
 
 
@@ -215,9 +270,10 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
-  }
+function feet(centimeters){
+  return centimeters / 0.0328084
+}
+console.log("task5a" , feet(5))
  
 
 
@@ -230,10 +286,10 @@ Using the annoyingSong function below do the following:
   2. At each invocation, it should RETURN this string (note: the tests are expecting the same string as below):
       "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
-
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
-  }
+console.log(task6)
+for(let i=99; i>0; i--){
+  console.log(i , "bottles of soda on the wall," , i ,  "bottles of soda, take one down pass it around" , i , "bottles of soda on the wall");
+}
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -251,9 +307,26 @@ Using the grade function below do the following:
    below should return 'you got an F'
 */
   
-function grade(/*Your Code here */){
-  /*Your Code here */
+function grade(score){
+  if(score >=90){
+    return 'you got an A'
   }
+  else if(score >=80){
+    return 'you got an B'
+  }
+  else if(score >=70){
+    return 'you got an C'
+  }
+  else if(score >=60){
+    return 'you got an D'
+  }
+  else {
+    return 'you got an F'
+  }
+}
+
+
+console.log("Result:" , grade(100))
   
   
 
