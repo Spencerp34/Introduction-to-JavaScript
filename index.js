@@ -17,6 +17,14 @@ Do the following:
 
    HINT: no function required
 */
+let votingAge = 22
+
+if (votingAge >17){
+  console.log(true);
+}
+else{
+  console.log(false);
+}
 
 
 
@@ -30,6 +38,16 @@ Do the following:
 
    HINT: no function required
 */
+
+let red = 7
+let blue = 3
+
+if (red > blue){
+   red = 1
+}
+console.log('task1b' , red);
+
+
 
 
 
@@ -46,7 +64,9 @@ Do the following:
    HINT: look up the Number method
 */
 
-
+let yearstring = '1999';
+let yearnumber = Number(yearstring);
+console.log('task1c' , yearnumber);
 
 
 /*
@@ -59,7 +79,12 @@ Do the following:
 */
 
 function multiply(a, b){
-  return a*b; }
+  return a*b; 
+  
+}
+
+let name=  multiply(5, 4)
+console.log("task1d" , name)
 
 
 
@@ -68,14 +93,16 @@ function multiply(a, b){
 //Age in Dog years
 /*
 Do the following:
-   1. Invoke the dogYears function below and pass an age value to it
+   
    2. Use the received value to calculate the age in dog years (1 human year is equal to 7 dog years)
    3. Return the newly calculated age
+   1. Invoke the dogYears function below and pass an age value to it
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(humanyears){
+  return humanyears*7
 }
+console.log("task2a" , dogYears(3))
 
 
 
@@ -106,9 +133,33 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
+function food(pounds , age){
+   if(age >= 1 && pounds <= 5){
+      return pounds * 0.05;
+   }
+   else if (age >= 1 && pounds >=6 && pounds <= 10){
+    return pounds * .04;
+   }
+   else if (age >= 1 && pounds >=11 && pounds <=15){
+    return pounds * .03;
+   }
+   else if (age >=1 && pounds >=15){
+     return pounds * 0.02;
+   }
+   else if (age < 1 && age >= 0.583){
+     return pounds * .04;
+   }
+   else if (age <= .583 && age >= 0.333){
+    return pounds * .05;
   }
+  else if (age < 0.333){
+    return pounds * .10;
+  }
+  else {
+    return "please try again";
+  }
+}
+console.log("task3a" , food(15 , 1))
 
 
 
