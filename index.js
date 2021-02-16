@@ -168,9 +168,49 @@ Use the game function below to do the following:
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
-function game(user, computer){
-    /*add your code here*/
+function game(user, computer){ 
+  if(user === computer){
+    return "it's a tie";
+  }
+  else if(user === "Rock" && computer === "Paper"){
+    return "you lose!";
+  }
+  else if(user === "Rock" && computer === "Scissors"){
+    return "you win!";
+  }
+  else if(user === "Paper" && computer === "Rock"){
+    return "you win!";
+  }
+  else if(user === "Paper" && computer === "Scissors"){
+    return "you lose!";
+  }
+  else if(user === "Scissors" && computer === "Rock"){
+    return "you lose!";
+  }
+  else if(user === "Scissors" && computer === "Paper"){
+    return "you win!";
+  }
+  else{
+    return "error occured... Did you cheat?";
+  }
+    }
+
+let computer = Math.random();
+computer = computer * 3;
+if(computer <=1){
+  computer = "Rock";
 }
+else if(computer <= 2){
+  computer = "Paper";
+}
+else if(computer <= 3){
+  computer = "Scissors";
+}
+else{
+  computer = "error";
+}
+
+console.log(game("Scissors", computer));
   
   
 
